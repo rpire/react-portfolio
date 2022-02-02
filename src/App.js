@@ -1,7 +1,10 @@
+import Navigation from './components/Navigation';
+import Hello from './components/Hello';
+
 const App = () => (
   <>
-    <h1>Set up React Project</h1>
-    <p>Project has been set up.</p>
+    <Navigation />
+    <Hello />
   </>
 );
 

@@ -5,6 +5,68 @@
 }
 
 body {
-  background-color: $background;
-  color: $text;
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+h1 {
+  @include header;
+
+  font-size: 50px;
+  line-height: 50px;
+  padding: calc(70px + 5.5vh) 10% 0 10%;
+}
+
+p {
+  @include text(400);
+
+  font-size: 14px;
+  padding: 0;
+  margin-top: 3vh;
+}
+
+.burger {
+  position: fixed;
+  top: 25px;
+  right: 10%;
+  font-size: 40px;
+  transition: 0.2s;
+}
+
+.burger:hover {
+  color: $action-bg;
+}
+
+.hello {
+  background-image: url(../public/media/image_geometry_1.svg);
+  background-repeat: no-repeat;
+  padding-bottom: 7vh;
+
+  p {
+    padding: 0 10%;
+  }
+}
+
+.collab-btn {
+  @include btn-primary;
+  @include text(500);
+  @include align-y;
+
+  font-size: 16px;
+  line-height: 24px;
+  width: 90%;
+  max-width: 450px;
+  height: 50px;
+  margin: 7vh auto;
+}
+
+.collab-btn:hover {
+  @include btn-primary-hover;
+}
+
+#half-mosaic {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
