@@ -1,0 +1,10 @@
+@import 'assets/colors', 'assets/mixins';
+
+* {
+  @include normalize;
+}
+
+body {
+  background-color: $background;
+  color: $text;
+}
