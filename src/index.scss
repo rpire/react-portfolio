@@ -9,12 +9,18 @@ body {
   color: $secondary-color;
 }
 
-h1 {
+h1,
+h2 {
   @include header;
+}
 
-  font-size: 50px;
-  line-height: 50px;
-  padding: calc(70px + 5.5vh) 10% 0 10%;
+h1 {
+  padding: calc(70px + 5.5vh) 5% 0 5%;
+}
+
+h2 {
+  padding: 40px 5% 0 5%;
+  margin-bottom: 32px;
 }
 
 p {
@@ -25,10 +31,14 @@ p {
   margin-top: 3vh;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .burger {
   position: fixed;
   top: 25px;
-  right: 10%;
+  right: 5%;
   font-size: 40px;
   transition: 0.2s;
 }
@@ -43,13 +53,14 @@ p {
   padding-bottom: 7vh;
 
   p {
-    padding: 0 10%;
+    padding: 0 5%;
   }
 }
 
 .collab-btn {
   @include btn-primary;
   @include text(500);
+  @include align-x;
   @include align-y;
 
   font-size: 16px;
@@ -69,4 +80,74 @@ p {
   width: 100%;
   max-width: 500px;
   margin: auto;
+}
+
+.portfolio {
+  padding-bottom: 56px;
+}
+
+.project-img,
+.project-info {
+  max-width: 500px;
+}
+
+.project-img {
+  display: block;
+  width: 100%;
+}
+
+.project-info {
+  background-color: $secondary-color;
+  color: $main-color;
+  padding-bottom: 20px;
+}
+
+.project-title {
+  @include text(300);
+
+  font-size: 20px;
+  line-height: 16px;
+  padding-top: 20px;
+  margin: 0 5% 22px 5%;
+}
+
+.tech-list {
+  display: flex;
+  margin: 0 5% 30px 5%;
+
+  li {
+    @include text(300);
+    @include align-x;
+    @include align-y;
+
+    font-size: 12px;
+    line-height: 10px;
+    background-color: $badge-fill;
+    color: $secondary-color;
+    width: 25%;
+    padding: 6px;
+    margin-right: 10px;
+  }
+}
+
+.project-btn {
+  @include btn-secondary;
+  @include text(500);
+  @include align-y;
+
+  font-size: 16px;
+  line-height: 24px;
+  width: 50%;
+  height: 44px;
+  padding: 10px;
+  margin: 0 5%;
+
+  .arrow-right {
+    font-size: 22px;
+    margin-left: 12px;
+  }
+}
+
+.project-btn:hover {
+  @include btn-primary-hover;
 }

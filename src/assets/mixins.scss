@@ -6,6 +6,8 @@
 
 @mixin header {
   font-family: playfair-display, serif;
+  font-size: 50px;
+  line-height: 50px;
   font-style: normal;
   font-weight: 400;
 }
@@ -30,13 +32,23 @@
   color: $secondary-color;
 }
 
+@mixin btn-secondary {
+  @include btn-primary;
+
+  border: 1px solid $main-color;
+}
+
 @mixin flex-column {
   display: flex;
   flex-flow: column;
 }
 
-@mixin align-y {
+@mixin align-x {
   display: flex;
   justify-content: center;
+}
+
+@mixin align-y {
+  display: flex;
   align-items: center;
 }
