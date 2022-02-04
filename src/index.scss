@@ -51,8 +51,9 @@ ul {
   background-image: url(../public/media/image_geometry_1.svg);
   background-repeat: no-repeat;
   padding-bottom: 7vh;
-
+  
   p {
+    max-width: 500px;
     padding: 0 5%;
   }
 }
@@ -66,7 +67,7 @@ ul {
   font-size: 16px;
   line-height: 24px;
   width: 90%;
-  max-width: 450px;
+  max-width: 400px;
   height: 50px;
   margin: 7vh auto;
 }
@@ -78,7 +79,7 @@ ul {
 #half-mosaic {
   display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -88,7 +89,8 @@ ul {
 
 .project-img,
 .project-info {
-  max-width: 500px;
+  max-width: 600px;
+  margin: auto;
 }
 
 .project-img {
@@ -108,12 +110,12 @@ ul {
   font-size: 20px;
   line-height: 16px;
   padding-top: 20px;
-  margin: 0 5% 22px 5%;
+  margin: 0 5% 16px 5%;
 }
 
 .tech-list {
   display: flex;
-  margin: 0 5% 30px 5%;
+  margin: 0 5% 20px 5%;
 
   li {
     @include text(300);
@@ -124,7 +126,6 @@ ul {
     line-height: 10px;
     background-color: $badge-fill;
     color: $secondary-color;
-    width: 25%;
     padding: 6px;
     margin-right: 10px;
   }
@@ -137,13 +138,13 @@ ul {
 
   font-size: 16px;
   line-height: 24px;
-  width: 50%;
+  width: 185px;
   height: 44px;
   padding: 10px;
   margin: 0 5%;
 
   .arrow-right {
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 12px;
   }
 }
