@@ -27,8 +27,9 @@ p {
   @include text(400);
 
   font-size: 14px;
+  max-width: 600px;
   padding: 0;
-  margin-top: 3vh;
+  margin: 3vh 15% 0 5%;
 }
 
 ul {
@@ -51,14 +52,9 @@ ul {
   background-image: url(../public/media/image_geometry_1.svg);
   background-repeat: no-repeat;
   padding-bottom: 7vh;
-  
-  p {
-    max-width: 500px;
-    padding: 0 5%;
-  }
 }
 
-.collab-btn {
+.centered-btn {
   @include btn-primary;
   @include text(500);
   @include align-x;
@@ -72,7 +68,7 @@ ul {
   margin: 7vh auto;
 }
 
-.collab-btn:hover {
+.centered-btn:hover {
   @include btn-primary-hover;
 }
 
@@ -142,13 +138,67 @@ ul {
   height: 44px;
   padding: 10px;
   margin: 0 5%;
+}
 
-  .arrow-right {
-    font-size: 20px;
-    margin-left: 12px;
-  }
+.arrow-right {
+  font-size: 22px;
+  margin-left: 12px;
 }
 
 .project-btn:hover {
   @include btn-primary-hover;
+}
+
+.about {
+  padding-bottom: 50px;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+
+  ul {
+    @include text(500);
+
+    list-style-type: disc;
+    min-height: 290px;
+    padding: 50px;
+    margin-bottom: 16px;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-size: 18px;
+      margin-left: 17px;
+    }
+  }
+}
+
+.languages,
+.frameworks {
+  color: $main-color;
+}
+
+.languages {
+  @include experience-deco('../public/media/hash.svg');
+
+  background-color: $lang-fill;
+}
+
+.frameworks {
+  @include experience-deco('../public/media/Group-18.svg');
+
+  background-color: $fw-fill;
+}
+
+.skills {
+  @include experience-deco('../public/media/ic_skills.svg');
+
+  background-color: $skll-fill;
 }

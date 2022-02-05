@@ -52,3 +52,9 @@
   display: flex;
   align-items: center;
 }
+
+@mixin experience-deco($url) {
+  background-image: url($url);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
