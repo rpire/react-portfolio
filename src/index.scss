@@ -29,7 +29,7 @@ p {
   font-size: 14px;
   max-width: 600px;
   padding: 0;
-  margin: 3vh 15% 0 5%;
+  margin: 3vh 5% 0 5%;
 }
 
 ul {
@@ -48,9 +48,13 @@ ul {
   color: $action-bg;
 }
 
-.hello {
+.hello,
+.contact {
   background-image: url(../public/media/image_geometry_1.svg);
   background-repeat: no-repeat;
+}
+
+.hello {
   padding-bottom: 7vh;
 }
 
@@ -66,10 +70,6 @@ ul {
   max-width: 400px;
   height: 50px;
   margin: 7vh auto;
-}
-
-.centered-btn:hover {
-  @include btn-primary-hover;
 }
 
 #half-mosaic {
@@ -201,4 +201,56 @@ ul {
   @include experience-deco('../public/media/ic_skills.svg');
 
   background-color: $skll-fill;
+}
+
+.contact {
+  background-color: $alt-bg;
+  padding-top: 106px;
+  padding-bottom: 64px;
+}
+
+form {
+  @include flex-column;
+  @include align-y;
+
+  margin-top: 32px;
+
+  .centered-btn {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.centered-btn:hover {
+  @include btn-primary-hover;
+}
+
+label {
+  @include text(400);
+
+  background-color: $main-color;
+  color: $light-txt;
+  font-size: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 8px;
+  margin: 8px auto;
+}
+
+input,
+textarea {
+  @include text(400);
+
+  border: none;
+  width: 100%;
+  margin-top: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: $light-txt;
+}
+
+textarea::placeholder {
+  @include text(400);
 }
