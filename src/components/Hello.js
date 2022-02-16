@@ -9,7 +9,7 @@ const Hello = () => (
     <a href="#hello" className="centered-btn" rel="noopener noreferrer">
       Start Collaboration
     </a>
-    <img src="./media/image_geometry_2.svg" alt="mosaic" id="half-mosaic" />
+    <img src="./media/image_geometry_2.svg" alt="" id="half-mosaic" />
   </section>
 );
 
