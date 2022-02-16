@@ -17,9 +17,10 @@ const About = () => (
     <div className="experience">
       <ul className="languages">
         <h3>Languages</h3>
+        <li>JavaScript</li>
         <li>HTML</li>
         <li>CSS</li>
-        <li>JavaScript</li>
+        <li>Ruby</li>
       </ul>
       <ul className="frameworks">
         <h3>Frameworks</h3>
