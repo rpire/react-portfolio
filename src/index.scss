@@ -241,9 +241,14 @@ input,
 textarea {
   @include text(400);
 
+  font-size: 14px;
   border: none;
   width: 100%;
   margin-top: 5px;
+}
+
+textarea {
+  height: 115px;
 }
 
 input:focus,
@@ -253,4 +258,55 @@ textarea:focus {
 
 textarea::placeholder {
   @include text(400);
+}
+
+footer {
+  background-color: $secondary-color;
+  padding: 32px 0 40px 0;
+}
+
+.resume-link,
+.social-media-list {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.resume-link {
+  @include align-y;
+  @include text(500);
+
+  text-decoration: none;
+  font-size: 18px;
+  color: $badge-fill;
+  transition: 0.2s;
+}
+
+.resume-link:hover {
+  color: $main-color;
+  text-decoration: underline;
+}
+
+.social-media-list {
+  @include align-y;
+
+  justify-content: space-between;
+  margin-top: 32px;
+
+  a {
+    font-size: 30px;
+    color: $main-color;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    font-size: 36px;
+  }
+}
+
+.social-media-list-item {
+  @include align-x;
+  @include align-y;
+
+  width: 36px;
+  height: 36px;
 }

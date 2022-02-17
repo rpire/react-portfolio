@@ -9,7 +9,11 @@ const Form = () => (
       <input type="text" id="email" name="email" />
     </label>
     <label htmlFor="message">
-      <textarea id="message" name="message" placeholder="Enter your message here" />
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Enter your message here..."
+      />
     </label>
     <button type="submit" className="centered-btn">Start Collaboration</button>
   </form>
