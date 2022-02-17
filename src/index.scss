@@ -241,9 +241,14 @@ input,
 textarea {
   @include text(400);
 
+  font-size: 14px;
   border: none;
   width: 100%;
   margin-top: 5px;
+}
+
+textarea {
+  height: 115px;
 }
 
 input:focus,
