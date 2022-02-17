@@ -6,7 +6,10 @@ const FooterLinkList = (props) => {
   return (
     <ul className="social-media-list">
       {children.map((child) => (
-        <li key={child.key}>
+        <li
+          key={child.key}
+          className="social-media-list-item"
+        >
           <a
             href={child.props.link}
             rel="noopener noreferrer"

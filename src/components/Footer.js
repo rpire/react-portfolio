@@ -7,16 +7,20 @@ import FooterLinkList from './FooterLinkList';
 
 const Footer = () => (
   <footer>
-    <a href="sdf.com" rel="noopener noreferrer">
+    <a
+      href="sdf.com"
+      rel="noopener noreferrer"
+      className="resume-link"
+    >
       Get my Resume
       <IoIosArrowDropright className="arrow-right" />
     </a>
     <FooterLinkList>
       <BsGithub key="github" link="https://github.com/rpire" />
-      <BsTwitter key="twitter" />
+      <BsTwitter key="twitter" link="https://twitter.com/RubenPire7/" />
       <BsLinkedin key="linkedin" link="https://www.linkedin.com/in/ruben-d-pire/" />
-      <FaMedium key="Medium" />
-      <FaAngellist key="Angellist" />
+      <FaMedium key="Medium" link="https://medium.com/@rubenpire7" />
+      <FaAngellist key="Angellist" link="https://angel.co/u/ruben-pire/" />
     </FooterLinkList>
   </footer>
 );
