@@ -31,6 +31,7 @@ h2 {
 p {
   @include text(400);
 
+  text-align: justify;
   font-size: 14px;
   max-width: 600px;
   padding: 0;
