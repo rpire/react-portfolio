@@ -3,7 +3,7 @@ import { IoIosArrowDropright } from 'react-icons/io';
 const About = () => (
   <section className="about">
     <div>
-      <h2>About Me</h2>
+      <h2 id="about">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
