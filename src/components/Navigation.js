@@ -13,7 +13,9 @@ const Navigation = () => {
   const [visibility, setVisibility] = useState(isOpen);
 
   const handleToggle = () => {
-    setVisibility(!visibility || isOpen());
+    if (!isOpen() || visibility) {
+      setVisibility(!visibility);
+    }
   };
 
   return (
@@ -21,7 +23,6 @@ const Navigation = () => {
       <Navbar
         visibility={visibility}
         toggleMenu={handleToggle}
-        isOpen={isOpen}
       />
       <IoMenuSharp className={`burger ${visibility ? 'invisible' : ''}`} onClick={handleToggle} />
     </>

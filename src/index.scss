@@ -45,12 +45,14 @@ ul {
   @include align-x;
 
   position: fixed;
+  top: -100vh;
   background-color: $alt-bg;
   background-image: url(../public/media/menu-bkgr.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  transition: 0.5s;
+  overflow: hidden;
+  transition: transform 0.5s;
 
   ul {
     @include flex-column;
@@ -393,8 +395,8 @@ footer {
   height: 36px;
 }
 
-.hidden-top {
-  transform: translateY(-100%);
+.dropdown {
+  transform: translateY(100%);
 }
 
 .invisible {
@@ -447,7 +449,7 @@ footer {
     display: none;
   }
 
-  .hidden-top {
+  .dropdown {
     transform: none;
   }
 }
