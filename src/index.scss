@@ -410,7 +410,8 @@ footer {
 }
 
 .invisible,
-.work-img {
+.work-img,
+.about-deco {
   display: none;
 }
 
@@ -438,8 +439,7 @@ footer {
     font-size: 16px;
   }
 
-  a,
-  .centered-btn {
+  a {
     font-size: 18px;
   }
 
@@ -459,6 +459,12 @@ footer {
       height: auto;
       margin: 0;
     }
+  }
+
+  .centered-btn {
+    font-size: 20px;
+    max-width: 450px;;
+    height: 60px;
   }
 
   .work-list {
@@ -500,6 +506,36 @@ footer {
     display: block;
     bottom: 0;
     left: 5%;
+  }
+
+  .about-lists {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .about-deco {
+    @include experience-deco('../public/media/image_dots_with_teal.svg');
+
+    display: block;
+    min-height: 290px;
+  }
+
+  label {
+    font-size: 14px;
+    max-width: 600px;
+  }
+
+  input,
+  textarea {
+    font-size: 18px;
+  }
+
+  .social-media-list {
+    margin-top: 50px;
   }
 
   #hello,
