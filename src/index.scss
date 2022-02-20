@@ -38,6 +38,15 @@ p {
   margin: 3vh 5% 0 5%;
 }
 
+a {
+  @include text(400);
+
+  font-size: 16px;
+  color: $secondary-color;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
 ul {
   list-style-type: none;
 }
@@ -54,6 +63,15 @@ ul {
   height: 100vh;
   overflow: hidden;
   transition: transform 0.5s;
+  z-index: 1;
+
+  a {
+    border-bottom: 2px solid $alt-bg;
+  }
+
+  a:hover {
+    border-bottom: 2px solid $secondary-color;
+  }
 
   ul {
     @include flex-column;
@@ -63,18 +81,6 @@ ul {
     height: 45vh;
     margin-top: 22.5vh;
   }
-}
-
-a {
-  @include text(400);
-
-  font-size: 16px;
-  color: $secondary-color;
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 2px solid $secondary-color;
 }
 
 .menu-dots-1,
@@ -363,12 +369,15 @@ footer {
   text-decoration: none;
   font-size: 18px;
   color: $badge-fill;
+  width: fit-content;
+  height: 30px;
+  border-bottom: 2px solid $secondary-color;
   transition: 0.2s;
 }
 
 .resume-link:hover {
   color: $main-color;
-  text-decoration: underline;
+  border-color: $main-color;
 }
 
 .social-media-list {

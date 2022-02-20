@@ -3,17 +3,17 @@ import { IoMenuSharp } from 'react-icons/io5';
 import Navbar from './Navbar';
 
 const Navigation = () => {
-  const isMediumScreen = () => {
+  const isMedScrn = () => {
     if (window.innerWidth < 769) {
       return false;
     }
     return true;
   };
 
-  const [visibility, setVisibility] = useState(isMediumScreen);
+  const [visibility, setVisibility] = useState(isMedScrn);
 
   const handleToggle = () => {
-    if (!isMediumScreen() || visibility) {
+    if (!isMedScrn() || visibility) {
       setVisibility(!visibility);
     }
   };
