@@ -10,7 +10,7 @@ const Navigation = () => {
     return true;
   };
 
-  const [visibility, setVisibility] = useState(isMedScrn);
+  const [visibility, setVisibility] = useState(false);
 
   const handleToggle = () => {
     if (!isMedScrn() || visibility) {
