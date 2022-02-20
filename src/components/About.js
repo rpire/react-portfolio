@@ -14,7 +14,7 @@ const About = () => (
         <IoIosArrowDropright className="arrow-right" />
       </a>
     </div>
-    <div className="experience">
+    <div className="about-lists">
       <ul className="languages">
         <h3>Languages</h3>
         <li>JavaScript (ES6)</li>
