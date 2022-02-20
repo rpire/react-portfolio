@@ -409,7 +409,8 @@ footer {
   transform: translateY(100%);
 }
 
-.invisible {
+.invisible,
+.work-img {
   display: none;
 }
 
@@ -428,6 +429,20 @@ footer {
 }
 
 @include media-x(768px) {
+  h1,
+  h2 {
+    font-size: 75px;
+  }
+
+ p {
+   font-size: 16px;
+ }
+
+ a,
+ .centered-btn {
+   font-size: 18px;
+ }
+
   .navbar {
     position: sticky;
     top: 0;
@@ -446,6 +461,46 @@ footer {
     }
   }
 
+  .work-list {
+    display: grid;
+    grid-template-areas: "title     project-1"
+                         "project-2 project-1"
+                         "project-2 project-3"
+                         "project-4 project-3"
+                         "project-4 project-5"
+                         "project-6 project-5"
+                         "project-6 work-deco";
+  }
+
+  .work-header {
+    @include align-y;
+    @include experience-deco("../public/media/geometric-deco-3.svg");
+
+    grid-area: title;
+    height: calc(14.7059vw + 79px);
+  }
+
+  .work-deco {
+    @include projects-deco("../public/media/image-geometry_4.svg");
+
+    position: relative;
+    grid-area: work-deco;
+    height: calc(14.7059vw + 79px);
+  }
+
+  @for $i from 1 through 6 {
+    .project-#{$i} {
+      grid-area: project-#{$i};
+    }
+  }
+
+  .work-img {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 5%;
+  }
+
   #hello,
   #portfolio,
   #about,
@@ -461,5 +516,11 @@ footer {
 
   .dropdown {
     transform: none;
+  }
+}
+
+@include media-x(1024px) {
+  body {
+    background-color: pink;
   }
 }
