@@ -385,16 +385,16 @@ footer {
 
   justify-content: space-between;
   margin-top: 32px;
+}
 
-  a {
-    font-size: 30px;
-    color: $main-color;
-    transition: 0.2s;
-  }
+.social-media-link {
+  font-size: 30px;
+  color: $main-color;
+  transition: 0.2s;
+}
 
-  a:hover {
-    font-size: 36px;
-  }
+.social-media-link:hover {
+  font-size: 36px;
 }
 
 .social-media-list-item {
@@ -434,14 +434,14 @@ footer {
     font-size: 75px;
   }
 
- p {
-   font-size: 16px;
- }
+  p {
+    font-size: 16px;
+  }
 
- a,
- .centered-btn {
-   font-size: 18px;
- }
+  a,
+  .centered-btn {
+    font-size: 18px;
+  }
 
   .navbar {
     position: sticky;
@@ -463,13 +463,14 @@ footer {
 
   .work-list {
     display: grid;
-    grid-template-areas: "title     project-1"
-                         "project-2 project-1"
-                         "project-2 project-3"
-                         "project-4 project-3"
-                         "project-4 project-5"
-                         "project-6 project-5"
-                         "project-6 work-deco";
+    grid-template-areas:
+      "title     project-1"
+      "project-2 project-1"
+      "project-2 project-3"
+      "project-4 project-3"
+      "project-4 project-5"
+      "project-6 project-5"
+      "project-6 work-deco";
   }
 
   .work-header {
@@ -502,10 +503,13 @@ footer {
   }
 
   #hello,
-  #portfolio,
   #about,
   #contact {
     scroll-margin-top: 45px;
+  }
+
+  #portfolio {
+    scroll-margin-top: 80px;
   }
 
   .menu-img,
