@@ -41,6 +41,7 @@ const AboutLists = () => {
       {experiences.map((experience) => (
         <AboutList key={experience.id} experience={experience} />
       ))}
+      <div className="about-deco" />
     </div>
   );
 };
