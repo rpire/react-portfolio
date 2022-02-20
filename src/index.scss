@@ -31,10 +31,20 @@ h2 {
 p {
   @include text(400);
 
+  text-align: justify;
   font-size: 14px;
   max-width: 600px;
   padding: 0;
   margin: 3vh 5% 0 5%;
+}
+
+a {
+  @include text(400);
+
+  font-size: 16px;
+  color: $secondary-color;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 ul {
@@ -45,12 +55,23 @@ ul {
   @include align-x;
 
   position: fixed;
+  top: -100vh;
   background-color: $alt-bg;
   background-image: url(../public/media/menu-bkgr.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  transition: 0.5s;
+  overflow: hidden;
+  transition: transform 0.5s;
+  z-index: 1;
+
+  a {
+    border-bottom: 2px solid $alt-bg;
+  }
+
+  a:hover {
+    border-bottom: 2px solid $secondary-color;
+  }
 
   ul {
     @include flex-column;
@@ -60,18 +81,6 @@ ul {
     height: 45vh;
     margin-top: 22.5vh;
   }
-}
-
-a {
-  @include text(400);
-
-  font-size: 16px;
-  color: $secondary-color;
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 2px solid $secondary-color;
 }
 
 .menu-dots-1,
@@ -235,7 +244,7 @@ a:hover {
   padding-bottom: 50px;
 }
 
-.experience {
+.about-lists {
   display: grid;
   grid-template-columns: 100%;
   width: 90%;
@@ -360,12 +369,15 @@ footer {
   text-decoration: none;
   font-size: 18px;
   color: $badge-fill;
+  width: fit-content;
+  height: 30px;
+  border-bottom: 2px solid $secondary-color;
   transition: 0.2s;
 }
 
 .resume-link:hover {
   color: $main-color;
-  text-decoration: underline;
+  border-color: $main-color;
 }
 
 .social-media-list {
@@ -373,16 +385,16 @@ footer {
 
   justify-content: space-between;
   margin-top: 32px;
+}
 
-  a {
-    font-size: 30px;
-    color: $main-color;
-    transition: 0.2s;
-  }
+.social-media-link {
+  font-size: 30px;
+  color: $main-color;
+  transition: 0.2s;
+}
 
-  a:hover {
-    font-size: 36px;
-  }
+.social-media-link:hover {
+  font-size: 36px;
 }
 
 .social-media-list-item {
@@ -393,11 +405,13 @@ footer {
   height: 36px;
 }
 
-.hidden-top {
-  transform: translateY(-100%);
+.dropdown {
+  transform: translateY(100%);
 }
 
-.invisible {
+.invisible,
+.work-img,
+.about-deco {
   display: none;
 }
 
@@ -416,6 +430,19 @@ footer {
 }
 
 @include media-x(768px) {
+  h1,
+  h2 {
+    font-size: 75px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
   .navbar {
     position: sticky;
     top: 0;
@@ -434,11 +461,91 @@ footer {
     }
   }
 
+  .centered-btn {
+    font-size: 20px;
+    max-width: 450px;
+    height: 60px;
+  }
+
+  .work-list {
+    display: grid;
+    grid-template-areas:
+      "title     project-1"
+      "project-2 project-1"
+      "project-2 project-3"
+      "project-4 project-3"
+      "project-4 project-5"
+      "project-6 project-5"
+      "project-6 work-deco";
+  }
+
+  .work-header {
+    @include align-y;
+    @include experience-deco("../public/media/geometric-deco-3.svg");
+
+    grid-area: title;
+    height: calc(14.7059vw + 79px);
+  }
+
+  .work-deco {
+    @include projects-deco("../public/media/image-geometry_4.svg");
+
+    position: relative;
+    grid-area: work-deco;
+    height: calc(14.7059vw + 79px);
+  }
+
+  @for $i from 1 through 6 {
+    .project-#{$i} {
+      grid-area: project-#{$i};
+    }
+  }
+
+  .work-img {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 5%;
+  }
+
+  .about-lists {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .about-deco {
+    @include experience-deco('../public/media/image_dots_with_teal.svg');
+
+    display: block;
+    min-height: 290px;
+  }
+
+  label {
+    font-size: 14px;
+    max-width: 600px;
+  }
+
+  input,
+  textarea {
+    font-size: 18px;
+  }
+
+  .social-media-list {
+    margin-top: 50px;
+  }
+
   #hello,
-  #portfolio,
   #about,
   #contact {
     scroll-margin-top: 45px;
+  }
+
+  #portfolio {
+    scroll-margin-top: 80px;
   }
 
   .menu-img,
@@ -447,7 +554,13 @@ footer {
     display: none;
   }
 
-  .hidden-top {
+  .dropdown {
     transform: none;
+  }
+}
+
+@include media-x(1024px) {
+  body {
+    background-color: pink;
   }
 }

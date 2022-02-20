@@ -3,17 +3,19 @@ import { IoMenuSharp } from 'react-icons/io5';
 import Navbar from './Navbar';
 
 const Navigation = () => {
-  const isOpen = () => {
+  const isMedScrn = () => {
     if (window.innerWidth < 769) {
       return false;
     }
     return true;
   };
 
-  const [visibility, setVisibility] = useState(isOpen);
+  const [visibility, setVisibility] = useState(false);
 
   const handleToggle = () => {
-    setVisibility(!visibility || isOpen());
+    if (!isMedScrn() || visibility) {
+      setVisibility(!visibility);
+    }
   };
 
   return (
@@ -21,7 +23,6 @@ const Navigation = () => {
       <Navbar
         visibility={visibility}
         toggleMenu={handleToggle}
-        isOpen={isOpen}
       />
       <IoMenuSharp className={`burger ${visibility ? 'invisible' : ''}`} onClick={handleToggle} />
     </>

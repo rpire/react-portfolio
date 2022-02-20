@@ -7,7 +7,7 @@ const Navbar = (props) => {
   const { visibility, toggleMenu } = props;
 
   return (
-    <nav className={`navbar ${visibility ? 'navbar' : 'hidden-top'}`}>
+    <nav className={`navbar ${visibility ? 'dropdown' : ''}`}>
       <IoCloseSharp onClick={toggleMenu} className="cross" />
       <NavLinkList toggleMenu={toggleMenu} />
       <NavDecorations />

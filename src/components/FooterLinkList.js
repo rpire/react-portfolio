@@ -14,6 +14,7 @@ const FooterLinkList = (props) => {
             href={child.props.link}
             rel="noopener noreferrer"
             target="_blank"
+            className="social-media-link"
           >
             {child}
           </a>

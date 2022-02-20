@@ -1,4 +1,5 @@
 import { IoIosArrowDropright } from 'react-icons/io';
+import AboutLists from './AboutLists';
 
 const About = () => (
   <section className="about">
@@ -14,31 +15,7 @@ const About = () => (
         <IoIosArrowDropright className="arrow-right" />
       </a>
     </div>
-    <div className="experience">
-      <ul className="languages">
-        <h3>Languages</h3>
-        <li>JavaScript (ES6)</li>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Ruby</li>
-      </ul>
-      <ul className="frameworks">
-        <h3>Frameworks</h3>
-        <li>React</li>
-        <li>Ruby on Rails</li>
-        <li>Bootstrap</li>
-        <li>RSpec</li>
-        <li>Jest</li>
-      </ul>
-      <ul className="skills">
-        <h3>Skills</h3>
-        <li>Pair Programming</li>
-        <li>Remote Collaboration</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Terminal</li>
-      </ul>
-    </div>
+    <AboutLists />
   </section>
 );
 

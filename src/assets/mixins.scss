@@ -53,6 +53,12 @@
   align-items: center;
 }
 
+@mixin projects-deco($url) {
+  background-image: url($url);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
 @mixin experience-deco($url) {
   background-image: url($url);
   background-position: right bottom;
