@@ -20,7 +20,7 @@ h2 {
 }
 
 h1 {
-  padding: calc(70px + 5.5vh) 5% 0 5%;
+  padding: 104px 5% 0 5%;
 }
 
 h2 {
@@ -35,7 +35,7 @@ p {
   font-size: 14px;
   max-width: 600px;
   padding: 0;
-  margin: 3vh 5% 0 5%;
+  margin: 20px 5% 0 5%;
 }
 
 a {
@@ -149,7 +149,7 @@ ul {
   padding-bottom: 7vh;
 }
 
-.centered-btn {
+.body-btn {
   @include btn-primary;
   @include text(500);
   @include align-x;
@@ -160,14 +160,13 @@ ul {
   width: 90%;
   max-width: 400px;
   height: 50px;
-  margin: 7vh auto;
+  margin: 40px 5%;
 }
 
-#half-mosaic {
+.half-mosaic {
   display: block;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  margin: 7vh auto;
 }
 
 .portfolio {
@@ -306,13 +305,13 @@ form {
 
   margin-top: 32px;
 
-  .centered-btn {
+  .body-btn {
     margin-top: 20px;
     margin-bottom: 0;
   }
 }
 
-.centered-btn:hover {
+.body-btn:hover {
   @include btn-primary-hover;
 }
 
@@ -461,10 +460,18 @@ footer {
     }
   }
 
-  .centered-btn {
+  .body-btn {
     font-size: 20px;
     max-width: 450px;
     height: 60px;
+  }
+
+  .half-mosaic {
+    width: 90%;
+  }
+
+  .portfolio {
+    padding-bottom: 104px;
   }
 
   .work-list {
@@ -510,7 +517,8 @@ footer {
 
   .about-lists {
     grid-template-columns: 1fr 1fr;
-    max-width: 800px;
+    max-width: 700px;
+    margin: 0 5%;
 
     ul {
       margin-bottom: 0;
