@@ -9,6 +9,7 @@ const Footer = () => (
   <footer>
     <a
       href="./resume.pdf"
+      target="_blank"
       rel="noopener noreferrer"
       className="resume-link"
     >
