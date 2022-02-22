@@ -10,7 +10,7 @@ const About = () => (
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ea eiusmod.
       </p>
-      <a href="sdf.com" rel="noopener noreferrer" className="body-btn">
+      <a href="./resume.pdf" rel="noopener noreferrer" className="body-btn">
         Get my CV
         <IoIosArrowDropright className="arrow-right" />
       </a>

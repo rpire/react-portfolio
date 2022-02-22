@@ -8,7 +8,7 @@ import FooterLinkList from './FooterLinkList';
 const Footer = () => (
   <footer>
     <a
-      href="sdf.com"
+      href="./resume.pdf"
       rel="noopener noreferrer"
       className="resume-link"
     >
