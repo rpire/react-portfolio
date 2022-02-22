@@ -15,7 +15,7 @@ const Form = () => (
         placeholder="Enter your message here..."
       />
     </label>
-    <button type="submit" className="centered-btn">Start Collaboration</button>
+    <button type="submit" className="body-btn">Start Collaboration</button>
   </form>
 );
 
