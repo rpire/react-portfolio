@@ -175,7 +175,7 @@ ul {
 
 .project-img,
 .project-info {
-  max-width: 600px;
+  max-width: 550px;
   margin: auto;
 }
 
@@ -247,13 +247,14 @@ ul {
   display: grid;
   grid-template-columns: 100%;
   width: 90%;
-  max-width: 500px;
-  margin: auto;
+  margin: 0 5%;
 
   ul {
     @include text(500);
 
     list-style-type: disc;
+    width: 100%;
+    max-width: 500px;
     min-height: 290px;
     padding: 50px;
     margin-bottom: 16px;
@@ -267,6 +268,10 @@ ul {
       font-size: 18px;
       margin-left: 17px;
     }
+  }
+
+  ul:nth-child(odd) {
+    margin-left: auto;
   }
 }
 
@@ -434,6 +439,10 @@ footer {
     font-size: 75px;
   }
 
+  h1 {
+    padding-top: 148px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -517,7 +526,7 @@ footer {
 
   .about-lists {
     grid-template-columns: 1fr 1fr;
-    max-width: 700px;
+    max-width: 740px;
     margin: 0 5%;
 
     ul {
