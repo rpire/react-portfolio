@@ -414,6 +414,7 @@ footer {
 }
 
 .invisible,
+.full-mosaic,
 .work-img,
 .about-deco {
   display: none;
@@ -577,7 +578,65 @@ footer {
 }
 
 @include media-x(1024px) {
-  body {
-    background-color: pink;
+  h1 {
+    line-height: 60px;
+    padding-top: 60px;
+  }
+
+  .hello {
+    display: flex;
+    gap: 5px;
+    background: none;
+    justify-content: flex-end;
+    max-width: 2100px;
+    margin: auto;
+  }
+
+  .hello-title-container {
+    @include experience-deco("../public/media/image_dots.svg");
+
+    width: 100%;
+  }
+
+  .full-mosaic {
+    display: block;
+    height: calc(100vh - 80px);
+    min-height: 690px;
+    justify-self: flex-end;
+  }
+
+  .half-mosaic {
+    display: none;
+  }
+}
+
+@include media-x(1280px) {
+  h1 {
+    font-size: 110px;
+    line-height: 110px;
+    padding-top: 0;
+  }
+
+  p {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .hello-title-container {
+    @include align-x;
+    @include align-y;
+  }
+
+  .hello-title {
+    width: 90%;
+    max-width: 775px;
+  }
+
+  #hello {
+    scroll-margin-top: 500px;
   }
 }
