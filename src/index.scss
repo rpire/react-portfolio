@@ -578,6 +578,13 @@ footer {
 }
 
 @include media-x(1024px) {
+  .hello,
+  .portfolio,
+  .about {
+    max-width: 2100px;
+    margin: auto;
+  }
+
   h1 {
     line-height: 60px;
     padding-top: 60px;
@@ -588,8 +595,6 @@ footer {
     gap: 5px;
     background: none;
     justify-content: flex-end;
-    max-width: 2100px;
-    margin: auto;
   }
 
   .hello-title-container {
@@ -607,6 +612,26 @@ footer {
 
   .half-mosaic {
     display: none;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-bottom: 104px;
+  }
+
+  .about-lists {
+    max-width: 600px;
+  }
+
+  .about-title {
+    padding-top: 75px;
+
+    * {
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 }
 
@@ -634,6 +659,10 @@ footer {
   .hello-title {
     width: 90%;
     max-width: 775px;
+  }
+
+  .about {
+    justify-content: space-evenly;
   }
 
   #hello {
