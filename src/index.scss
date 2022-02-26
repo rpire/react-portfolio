@@ -417,6 +417,10 @@ footer {
 .invisible,
 .full-mosaic,
 .work-img,
+.work-deco-2,
+.work-deco-3,
+.work-deco-4,
+.work-deco-5,
 .about-deco {
   display: none;
 }
@@ -505,9 +509,12 @@ footer {
     height: calc(14.7059vw + 79px);
   }
 
-  .work-deco {
+  .work-deco,
+  .work-deco-4 {
     @include projects-deco("../public/media/image-geometry_4.svg");
+  }
 
+  .work-deco {
     position: relative;
     grid-area: work-deco;
     height: calc(14.7059vw + 79px);
@@ -639,6 +646,105 @@ footer {
       margin-left: 0;
     }
   }
+
+  .work-list {
+    grid-template-columns: 32% 1fr 32%;
+    grid-template-areas:
+      "title     project-1 project-1"
+      "project-2 project-2 project-6"
+      "project-2 project-2 project-5"
+      "project-3 project-3 project-5"
+      "project-4 project-4 project-4";
+  }
+
+  .work-header {
+    @include projects-deco("../public/media/image_dots.svg");
+
+    align-items: center;
+    height: 100%;
+  }
+
+  #portfolio {
+    padding-top: 0;
+    padding-bottom: 75px;
+    transform: rotate(-90deg);
+  }
+
+  .project-card {
+    position: relative;
+    overflow-y: hidden;
+    height: fit-content;
+  }
+
+  .project-2,
+  .project-3,
+  .project-4 {
+    display: flex;
+  }
+
+  .project-2 {
+    .project-card {
+      align-self: flex-end;
+      width: 46.5%;
+    }
+  }
+
+  .project-3 {
+    .project-card {
+      width: 82%;
+    }
+  }
+
+  .project-4 {
+    .project-card {
+      width: 32%;
+    }
+  }
+
+  .work-deco-2,
+  .work-deco-3,
+  .work-deco-4,
+  .work-deco-5 {
+    display: block;
+  }
+
+  .work-deco-2 {
+    width: 53.5%;
+  }
+
+  .work-deco-3 {
+    width: 18%;
+    align-self: flex-end;
+  }
+
+  .work-deco-4 {
+    width: 55.75%;
+  }
+
+  .work-deco-5 {
+    width: 75%;
+    margin-left: 25%;
+  }
+
+  .project-img,
+  .project-info {
+    max-width: none;
+  }
+
+  .project-info {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s;
+  }
+
+  .project-img:hover ~ .project-info,
+  .project-info:hover {
+    transform: translateY(-150px);
+  }
+
+  .work-deco {
+    display: none;
+  }
 }
 
 @include media-x(1280px) {
@@ -669,6 +775,11 @@ footer {
 
   .about {
     justify-content: space-evenly;
+  }
+
+  #portfolio {
+    font-size: 110px;
+    padding-bottom: 0;
   }
 
   #hello {
