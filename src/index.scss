@@ -329,6 +329,7 @@ label {
   width: 90%;
   max-width: 500px;
   padding: 8px;
+  border: 1px solid $label-border;
   margin: 8px auto;
 }
 
@@ -587,7 +588,7 @@ footer {
 
   h1 {
     line-height: 60px;
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .hello {
@@ -598,9 +599,14 @@ footer {
   }
 
   .hello-title-container {
+    @include align-y;
     @include experience-deco("../public/media/image_dots.svg");
 
     width: 100%;
+  }
+
+  .hello-title {
+    padding-bottom: 50px;
   }
 
   .full-mosaic {
