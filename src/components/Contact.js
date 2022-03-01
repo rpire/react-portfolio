@@ -8,6 +8,7 @@ const Contact = () => (
       labore et dolore magna.
     </p>
     <Form />
+    <img src="./media/image-geometry_7.svg" alt="" className="contact-deco" />
   </section>
 );
 
