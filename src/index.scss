@@ -349,7 +349,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline-color: $light-txt;
+  outline-color: $label-border;
 }
 
 textarea::placeholder {
