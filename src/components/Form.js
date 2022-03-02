@@ -8,7 +8,7 @@ const Form = () => (
       Your email
       <input type="text" id="email" name="email" />
     </label>
-    <label htmlFor="message">
+    <label htmlFor="message" className="message-label">
       <textarea
         id="message"
         name="message"

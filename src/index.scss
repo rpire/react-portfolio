@@ -175,7 +175,7 @@ ul {
 
 .project-img,
 .project-info {
-  max-width: 600px;
+  max-width: 550px;
   margin: auto;
 }
 
@@ -247,13 +247,14 @@ ul {
   display: grid;
   grid-template-columns: 100%;
   width: 90%;
-  max-width: 500px;
-  margin: auto;
+  margin: 0 5%;
 
   ul {
     @include text(500);
 
     list-style-type: disc;
+    width: 100%;
+    max-width: 500px;
     min-height: 290px;
     padding: 50px;
     margin-bottom: 16px;
@@ -267,6 +268,10 @@ ul {
       font-size: 18px;
       margin-left: 17px;
     }
+  }
+
+  ul:nth-child(odd) {
+    margin-left: auto;
   }
 }
 
@@ -324,6 +329,7 @@ label {
   width: 90%;
   max-width: 500px;
   padding: 8px;
+  border: 1px solid $label-border;
   margin: 8px auto;
 }
 
@@ -343,7 +349,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline-color: $light-txt;
+  outline-color: $label-border;
 }
 
 textarea::placeholder {
@@ -409,8 +415,14 @@ footer {
 }
 
 .invisible,
+.full-mosaic,
 .work-img,
-.about-deco {
+.work-deco-2,
+.work-deco-3,
+.work-deco-4,
+.work-deco-5,
+.about-deco,
+.contact-deco {
   display: none;
 }
 
@@ -432,6 +444,10 @@ footer {
   h1,
   h2 {
     font-size: 75px;
+  }
+
+  h1 {
+    padding-top: 148px;
   }
 
   p {
@@ -494,9 +510,12 @@ footer {
     height: calc(14.7059vw + 79px);
   }
 
-  .work-deco {
+  .work-deco,
+  .work-deco-4 {
     @include projects-deco("../public/media/image-geometry_4.svg");
+  }
 
+  .work-deco {
     position: relative;
     grid-area: work-deco;
     height: calc(14.7059vw + 79px);
@@ -517,7 +536,7 @@ footer {
 
   .about-lists {
     grid-template-columns: 1fr 1fr;
-    max-width: 700px;
+    max-width: 740px;
     margin: 0 5%;
 
     ul {
@@ -568,7 +587,335 @@ footer {
 }
 
 @include media-x(1024px) {
-  body {
-    background-color: pink;
+  .hello,
+  .portfolio,
+  .about {
+    max-width: 2100px;
+    margin: auto;
+  }
+
+  h1 {
+    line-height: 60px;
+    padding-top: 0;
+  }
+
+  .hello {
+    display: flex;
+    gap: 5px;
+    background: none;
+    justify-content: flex-end;
+  }
+
+  .hello-title-container {
+    @include align-y;
+    @include experience-deco("../public/media/image_dots.svg");
+
+    width: 100%;
+  }
+
+  .hello-title {
+    padding-bottom: 50px;
+  }
+
+  .full-mosaic {
+    display: block;
+    height: calc(100vh - 80px);
+    min-height: 690px;
+    justify-self: flex-end;
+  }
+
+  .half-mosaic {
+    display: none;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-top: 104px;
+    padding-bottom: 208px;
+  }
+
+  .about-lists {
+    max-width: 600px;
+  }
+
+  .about-title {
+    padding-top: 75px;
+
+    * {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+
+  .work-list {
+    grid-template-columns: 32% 1fr 32%;
+    grid-template-areas:
+      "title     project-1 project-1"
+      "project-2 project-2 project-6"
+      "project-2 project-2 project-5"
+      "project-3 project-3 project-5"
+      "project-4 project-4 project-4";
+  }
+
+  .work-header {
+    @include projects-deco("../public/media/image_dots.svg");
+
+    align-items: center;
+    height: 100%;
+  }
+
+  #portfolio {
+    padding-top: 0;
+    padding-bottom: 75px;
+    transform: rotate(-90deg);
+    scroll-margin-top: 110px;
+  }
+
+  .project-card {
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  .project-2,
+  .project-3,
+  .project-4 {
+    display: flex;
+  }
+
+  .project-2 {
+    .project-card {
+      align-self: flex-end;
+      width: 46.5%;
+    }
+  }
+
+  .project-3 {
+    .project-card {
+      width: 82%;
+    }
+  }
+
+  .project-4 {
+    .project-card {
+      width: 32%;
+    }
+  }
+
+  .work-deco-2,
+  .work-deco-3,
+  .work-deco-4,
+  .work-deco-5 {
+    display: block;
+  }
+
+  .work-deco-2 {
+    width: 53.5%;
+  }
+
+  .work-deco-3 {
+    width: 18%;
+    align-self: flex-end;
+  }
+
+  .work-deco-4 {
+    width: 55.75%;
+  }
+
+  .work-deco-5 {
+    width: 75%;
+    margin-left: 25%;
+  }
+
+  .project-img,
+  .project-info {
+    max-width: none;
+  }
+
+  .project-info {
+    @include flex-column;
+
+    position: absolute;
+    justify-content: center;
+    background-color: $sec-opacity;
+    width: 100%;
+    height: 67%;
+    transition: transform 0.5s;
+  }
+
+  .project-1,
+  .project-3 {
+    .project-info {
+      h3 {
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 20px;
+      }
+
+      li {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .project-btn {
+        font-size: 20px;
+        line-height: 20px;
+        width: 220px;
+        height: 60px;
+      }
+    }
+  }
+
+  .project-info:hover,
+  .project-img:hover ~ .project-info {
+    transform: translateY(-100%);
+  }
+
+  .contact {
+    h2,
+    p {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+      max-width: 40%;
+    }
+  }
+
+  .work-deco {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+
+  .resume-link {
+    width: 15%;
+    margin: 0 5%;
+  }
+
+  .social-media-list {
+    width: 45%;
+    margin: 0 5%;
+  }
+
+  #hello {
+    scroll-margin-top: 500px;
+  }
+
+  #about {
+    scroll-margin-top: 175px;
+  }
+
+  #contact {
+    scroll-margin-top: 90px;
+  }
+}
+
+@include media-x(1280px) {
+  h1 {
+    font-size: 110px;
+    line-height: 110px;
+    padding-top: 0;
+  }
+
+  p {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .hello-title-container {
+    @include align-x;
+    @include align-y;
+  }
+
+  .hello-title {
+    width: 90%;
+    max-width: 775px;
+  }
+
+  .about {
+    justify-content: space-evenly;
+  }
+
+  .contact {
+    position: relative;
+    background-image: url("../public/media/image-geometry_6.svg");
+    padding: 104px 0 75px 0;
+  }
+
+  .project-1,
+  .project-3 {
+    .project-info {
+      h3 {
+        font-size: 45px;
+        line-height: 45px;
+        margin-bottom: 32px;
+      }
+
+      li {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      .project-btn {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 30%;
+
+    label {
+      width: 45%;
+      max-width: none;
+      margin: 21px 0;
+    }
+
+    .body-btn {
+      width: 50%;
+      height: 70px;
+      margin: 40px auto;
+    }
+  }
+
+  .message-label {
+    width: 100%;
+    height: 140px;
+  }
+
+  .contact-deco {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+  }
+
+  #portfolio {
+    font-size: 110px;
+    padding-bottom: 0;
+    scroll-margin-top: 155px;
+  }
+
+  #contact {
+    scroll-margin-top: 75px;
   }
 }

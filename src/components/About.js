@@ -3,7 +3,7 @@ import AboutLists from './AboutLists';
 
 const About = () => (
   <section className="about">
-    <div>
+    <header className="about-title">
       <h2 id="about">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -19,7 +19,7 @@ const About = () => (
         Get my CV
         <IoIosArrowDropright className="arrow-right" />
       </a>
-    </div>
+    </header>
     <AboutLists />
   </section>
 );
