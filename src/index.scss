@@ -793,6 +793,22 @@ footer {
     display: none;
   }
 
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+
+  .resume-link {
+    width: 15%;
+    margin: 0 5%;
+  }
+
+  .social-media-list {
+    width: 45%;
+    margin: 0 5%;
+  }
+
   #hello {
     scroll-margin-top: 500px;
   }
