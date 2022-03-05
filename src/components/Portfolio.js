@@ -5,8 +5,8 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Obelisk Language Center',
-      description: 'This is the first project.',
+      title: 'First Project',
+      description: 'This model should display information about the first project.',
       image: './media/work-img-6.svg',
       technologies: [
         {
@@ -26,8 +26,8 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Obelisk Language Center',
-      description: 'This is the first project.',
+      title: 'Second Project',
+      description: 'This modal should display information about the second project.',
       image: './media/work-img-5.svg',
       technologies: [
         {
@@ -43,8 +43,8 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'Obelisk Language Center',
-      description: 'This is the first project.',
+      title: 'Were You Expecting the Third Project?',
+      description: 'Sorry to disappoint, I didn\'t want all projects to be the same.',
       image: './media/work-img-6.svg',
       technologies: [
         {
@@ -60,7 +60,7 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: 'Mi mama me mima',
+      title: 'Mi Mama me Mima',
       description: 'Mi mama me ama',
       image: './media/work-img-5.svg',
       technologies: [
@@ -77,9 +77,9 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      title: 'Mi mama me mima',
-      description: 'Mi mama me ama',
-      image: './media/work-img-5.svg',
+      title: 'Do You Like Avocados?',
+      description: 'I\'m asking because I love them!',
+      image: './media/work-img-6.svg',
       technologies: [
         {
           id: 1,
@@ -94,8 +94,8 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: 'Mi mama me mima',
-      description: 'Mi mama me ama',
+      title: 'Last Project',
+      description: 'This modal should display information about the last project in the list. Is it? Great!',
       image: './media/work-img-5.svg',
       technologies: [
         {
@@ -123,21 +123,21 @@ const Portfolio = () => {
           <img src="./media/image-geometry_2-1.svg" alt="" className="work-deco-2" />
         </li>
         <li className="project-3">
-          <Project project={projects[0]} />
+          <Project project={projects[2]} />
           <img src="./media/rhombus.svg" alt="" className="work-deco-3" />
         </li>
         <li className="project-4">
           <div className="work-deco-4">
             <img src="./media/image-geometry_5.svg" alt="" />
           </div>
-          <Project project={projects[1]} />
+          <Project project={projects[3]} />
         </li>
         <li className="project-5">
-          <Project project={projects[0]} />
+          <Project project={projects[4]} />
           <img src="./media/group-deco-2.svg" alt="" className="work-deco-5" />
         </li>
         <li className="project-6">
-          <Project project={projects[1]} />
+          <Project project={projects[5]} />
         </li>
         <div className="work-deco">
           <img src="./media/image_dots.svg" alt="" className="work-dots work-img" />
