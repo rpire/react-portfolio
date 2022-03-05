@@ -414,6 +414,38 @@ footer {
   transform: translateY(100%);
 }
 
+.modal-curtain {
+  @include align-x;
+  @include align-y;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $sec-opacity;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s;
+  z-index: 2;
+}
+
+.curtain-transition {
+  opacity: 0;
+}
+
+.modal {
+  background-color: $main-color;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  transition: transform 0.5s;
+  z-index: 3;
+}
+
+.modal-transition {
+  transform: scale(0);
+}
+
 .invisible,
 .full-mosaic,
 .work-img,
@@ -583,6 +615,11 @@ footer {
 
   .dropdown {
     transform: none;
+  }
+
+  .modal {
+    width: 90vw;
+    height: 90vh;
   }
 }
 
