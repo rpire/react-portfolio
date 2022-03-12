@@ -33,7 +33,7 @@ const Project = (props) => {
   return (
     <article className="project-card">
       <img
-        src={project.image}
+        src={project.images[0]}
         alt="project_image"
         className="project-img"
       />

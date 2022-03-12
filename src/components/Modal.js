@@ -1,10 +1,16 @@
 import propTypes from 'prop-types';
+import { IoCloseSharp } from 'react-icons/io5';
+import ModalTechList from './ModalTechList';
+import ModalButtons from './ModalButtons';
 
 const Modal = (props) => {
   const {
     project: {
       title,
       description,
+      images,
+      technologies,
+      links,
     },
     curtainVisibility,
     modalVisibility,
@@ -14,15 +20,12 @@ const Modal = (props) => {
   return (
     <div className={`modal-curtain ${curtainVisibility}`}>
       <article className={`modal ${modalVisibility}`}>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <button
-          type="button"
-          onClick={handleClose}
-          className="modal-btn"
-        >
-          Close me here
-        </button>
+        <IoCloseSharp onClick={handleClose} className="modal-cross" />
+        <h2 className="modal-title">{title}</h2>
+        <ModalTechList technologies={technologies} />
+        <img src={images[1]} alt="Project screenshot" className="modal-img" />
+        <p className="modal-txt">{description}</p>
+        <ModalButtons links={links} />
       </article>
     </div>
   );
