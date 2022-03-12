@@ -38,6 +38,13 @@
   border: 1px solid $main-color;
 }
 
+@mixin btn-modal {
+  @include btn-primary;
+
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
 @mixin flex-column {
   display: flex;
   flex-flow: column;
