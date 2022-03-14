@@ -1,29 +1,7 @@
 import propTypes from 'prop-types';
+import navLinks from '../data/navLinks';
 
 const NavLinkList = (props) => {
-  const navLinks = [
-    {
-      id: 'hello',
-      path: '#hello',
-      text: 'Hello',
-    },
-    {
-      id: 'portfolio',
-      path: '#portfolio',
-      text: 'Projects',
-    },
-    {
-      id: 'about',
-      path: '#about',
-      text: 'About',
-    },
-    {
-      id: 'contact',
-      path: '#contact',
-      text: 'Contact',
-    },
-  ];
-
   const { toggleMenu } = props;
 
   return (

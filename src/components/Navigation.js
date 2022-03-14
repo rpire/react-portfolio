@@ -1,15 +1,9 @@
 import { useState } from 'react';
 import { IoMenuSharp } from 'react-icons/io5';
 import Navbar from './Navbar';
+import isMedScrn from '../logic/isMedScrn';
 
 const Navigation = () => {
-  const isMedScrn = () => {
-    if (window.innerWidth < 769) {
-      return false;
-    }
-    return true;
-  };
-
   const [visibility, setVisibility] = useState(false);
 
   const handleToggle = () => {
