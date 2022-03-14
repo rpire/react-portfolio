@@ -972,10 +972,6 @@ footer {
     max-width: 775px;
   }
 
-  .about-title {
-    padding-top: 45px;
-  }
-
   form {
     flex-direction: row;
     flex-wrap: wrap;
@@ -996,6 +992,8 @@ footer {
   }
 
   .about-title {
+    padding-top: 45px;
+
     p {
       margin-top: 10px;
       margin-bottom: 20px;
